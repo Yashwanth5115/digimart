@@ -1,0 +1,36 @@
+/* Digimart dark dashboard (black CRM look). Loaded after digimart-theme.css, app pages only. */
+:root{--bg-primary:#000;--bg-secondary:#0a0a0b;--bg-card:#0e0e10;--bg-card-hover:#131316;--bg-glass:#0e0e10;--bg-glass-hover:#17171a;--bg-input:#0e0e10;--bg-topbar:#000;--bg-table-head:#0e0e10;
+--border-color:#1d1d21;--border-hover:#34343a;--text-primary:#fafafa;--text-secondary:#d4d4d8;--text-muted:#8a8a93;--shadow-sm:none;--shadow-md:0 8px 24px rgba(0,0,0,.5)}
+body,.main-content,.content-area{background:#000!important;color:#fafafa}
+h1,h2,h3,.dm-serif{font-family:'Inter',sans-serif;font-weight:600}
+.sidebar{background:#0a0a0b!important;border-right:1px solid #1d1d21}.sidebar *{color:#a1a1aa}
+.sidebar .nav-item.active{background:#16161a!important;border:1px solid #2a2a30;border-radius:10px}.sidebar .nav-item.active *{color:#fff}.sidebar-logo{background:#fff!important;color:#000!important}
+.topbar{background:rgba(0,0,0,.9)!important;border-bottom:1px solid #1d1d21}.topbar-title,.topbar-profile-name{color:#fff}
+.topbar-search{background:#0e0e10!important;border:1px solid #1d1d21!important;border-radius:10px!important;box-shadow:none}.topbar-search input{color:#fafafa!important}
+.topbar-search .search-mic{background:#1d1d21}.topbar-btn{background:#0e0e10!important;border:1px solid #1d1d21!important;color:#a1a1aa!important}.topbar-btn:hover{background:#17171a!important;color:#fff!important}
+.glass-card,.stat-card,.dm-card{background:#0e0e10!important;border:1px solid #1d1d21!important;border-radius:16px!important;box-shadow:none!important}
+.input-field,select,input{background:#0e0e10!important;color:#fafafa!important;border:1px solid #26262b!important}
+.btn-primary{background:#fff!important;color:#000!important}.btn-primary:hover{background:#d4d4d8!important}
+.btn-secondary{border:1px solid #34343a!important;color:#e4e4e7!important}
+.tab{color:#a1a1aa}.tab.active{background:#16161a!important;color:#fff!important;border:1px solid #2a2a30}
+table th{background:#0e0e10;color:#8a8a93}table td,table th{border-bottom:1px solid #1d1d21}
+.dm-pill.paid{background:#10281e;color:#34d399}.dm-pill.pending{background:#2a1a0a;color:#fb923c}.dm-pill.upi{background:#241a3a;color:#a78bfa}
+.dm-hello h2{font-size:26px}.dm-card{padding:18px}.dm-card-top{display:flex;justify-content:space-between;align-items:flex-start}
+.dm-lbl{font-size:12px;color:#8a8a93}.dm-num{font-size:30px;font-weight:700;margin:6px 0}
+.dm-delta{font-size:12px}.dm-delta.up{color:#34d399}.dm-delta.down{color:#f87171}.dm-delta.mute{color:#8a8a93}
+.dm-tile{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-size:17px}
+.dm-tile.g{background:#10281e;color:#34d399}.dm-tile.p{background:#241a3a;color:#a78bfa}.dm-tile.o{background:#2a1a0a;color:#fb923c}.dm-tile.n{background:#1d1d21;color:#d4d4d8}
+.dm-grid{display:grid;gap:16px;margin-bottom:16px}.dm-4{grid-template-columns:repeat(4,1fr)}.dm-2{grid-template-columns:1.5fr 1fr}.dm-2e{grid-template-columns:1fr 1fr}
+.dm-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-weight:600}.dm-head select{padding:5px 10px;border-radius:8px;font-size:12px}
+.dm-row{display:flex;align-items:center;gap:12px;padding:10px 0}.dm-av{width:38px;height:38px;border-radius:50%;background:#26262b;display:grid;place-items:center;font-weight:600;font-size:13px;flex:none}
+.dm-row small{display:block;color:#8a8a93}.dm-row .grow{flex:1}.dm-dot{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:13px;flex:none}
+.dm-leg{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;font-size:12px;color:#a1a1aa;margin-top:8px}.dm-leg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+@media(max-width:900px){.dm-4{grid-template-columns:1fr 1fr}.dm-2,.dm-2e{grid-template-columns:1fr}}
+
+/* Match the reference dashboard */
+.dm-grid{gap:24px}.dm-card{border-radius:24px!important;padding:26px!important;background:#0f0f11!important;border:1px solid #1f1f23!important}
+.dm-lbl{font-size:14px}.dm-num{font-size:40px;letter-spacing:-.02em;margin:10px 0 14px}.dm-delta{font-size:14px}
+.dm-tile{width:54px;height:54px;border-radius:14px;font-size:20px}.dm-hello h2{font-size:32px}.dm-head{font-size:19px;margin-bottom:18px}
+.dm-head select{background:#18181b!important;border:1px solid #26262b!important;border-radius:10px!important;padding:8px 14px!important}
+div:has(>#svTrend),div:has(>#svMix){background:#09090b;border-radius:16px;padding:18px;height:300px!important}
+.dm-leg{display:none}

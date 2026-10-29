@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DigiMart — Your shop, all in one place</title>
+  <meta name="description" content="DigiMart helps neighborhood shops track stock, create bills, understand sales, and manage deliveries in one simple place, in English and Telugu.">
+  <meta name="theme-color" content="#FFF1E4">
+  <link rel="icon" type="image/png" href="assets/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/landing-anim.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="backdrop" aria-hidden="true">
+    <svg viewBox="0 0 1440 1180" fill="none" preserveAspectRatio="xMidYMin slice">
+      <path d="M-210 165C13 55 230 82 355 203C459 304 452 454 337 551C246 628 116 609 64 731C8 860 92 1018 253 1112" stroke="#FBE3D3" stroke-width="72" stroke-linecap="round" opacity=".8"/>
+      <path d="M1254 -155C1108 54 1134 207 1281 302C1412 387 1524 495 1459 668" stroke="#F8DDC8" stroke-width="48" stroke-linecap="round" opacity=".62"/>
+      <path d="M730 1084C803 1004 931 1018 1010 1091" stroke="#FBE3D3" stroke-width="34" stroke-linecap="round" opacity=".7"/>
+    </svg>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="DigiMart home">
+        <span class="brand-mark"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
+        <span class="brand-word">DigiMart</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#features">Solutions</a>
+        <a href="#features">Pricing</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="signin" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="login.html">Start free</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>The friendly way to run your shop</p>
+          <h1 class="hero-title" id="hero-title" aria-label="Your shop, all in one place.">
+            <span class="hero-title-text" aria-hidden="true">Your shop,<br>all in <span class="one">one<svg class="swoosh" viewBox="0 0 160 22" fill="none" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16C38 7 84 4 156 9" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg></span> place.</span>
+            <canvas class="hero-dots" aria-hidden="true"></canvas>
+          </h1>
+          <p class="hero-sub">Run your kirana shop without the chaos. Track stock, create bills, understand sales, and manage deliveries — all from one friendly dashboard. Available in English and Telugu.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="login.html">Start free <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="btn btn-secondary btn-lg" href="#features">Explore features</a>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof-icons" aria-hidden="true">
+              <span><i class="fa-solid fa-store"></i></span>
+              <span><i class="fa-solid fa-indian-rupee-sign"></i></span>
+              <span><i class="fa-solid fa-language"></i></span>
+              <span><i class="fa-solid fa-truck-fast"></i></span>
+            </div>
+            <p><strong>Made for India's neighborhood shops.</strong>English and Telugu, side by side.</p>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="photo-card">
+            <div class="photo-fallback" aria-hidden="true">
+              <i class="fa-solid fa-store"></i>
+              <span>Your shop,<br>running beautifully.</span>
+            </div>
+            <img class="hero-photo" src="assets/hero-shopkeeper.jpg" alt="A shopkeeper smiling behind the counter of a bright neighborhood store" width="996" height="1245" fetchpriority="high" decoding="async">
+            <span class="photo-caption"><i class="fa-solid fa-circle" aria-hidden="true"></i>Open today</span>
+          </div>
+
+          <div class="floating-cards" aria-label="DigiMart at a glance">
+            <article class="float-card card-sales">
+              <span class="card-icon" aria-hidden="true"><i class="fa-solid fa-arrow-trend-up"></i></span>
+              <div class="card-copy">
+                <p class="card-label">Today's sales</p>
+                <p class="sales-value" id="liveSales">₹24,580</p>
+                <span class="delta"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i>12% from yesterday</span>
+              </div>
+            </article>
+
+            <article class="float-card card-invoice">
+              <span class="card-icon" aria-hidden="true"><i class="fa-solid fa-receipt"></i></span>
+              <div class="card-copy">
+                <p class="card-label">New invoice</p>
+                <p class="card-main">#DM-2048</p>
+                <p class="card-note">Ramesh Stores · Paid</p>
+              </div>
+            </article>
+
+            <article class="float-card card-stock">
+              <span class="card-icon" aria-hidden="true"><i class="fa-solid fa-triangle-exclamation"></i></span>
+              <div class="card-copy">
+                <p class="card-label">Stock alert</p>
+                <p class="card-main">Rice is running low</p>
+                <p class="card-note">Only 4 bags left</p>
+              </div>
+            </article>
+
+            <article class="float-card card-delivery">
+              <span class="card-icon" aria-hidden="true"><i class="fa-solid fa-truck-fast"></i></span>
+              <div class="card-copy">
+                <p class="card-label">Out for delivery</p>
+                <p class="card-main">3 orders out</p>
+                <p class="card-note">On the way to customers</p>
+              </div>
+            </article>
+
+            <article class="float-card card-voice">
+              <span class="card-icon" aria-hidden="true"><i class="fa-solid fa-microphone-lines"></i></span>
+              <div class="card-copy">
+                <p class="card-label">Telugu voice</p>
+                <p class="card-main" lang="te">తెలుగులో మాట్లాడండి</p>
+                <p class="card-note">Talk. Manage. Done.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features" aria-labelledby="features-title">
+      <h2 class="sr-only" id="features-title">Everything your shop needs</h2>
+      <div class="feature-strip">
+        <article class="feature-item">
+          <span class="feature-icon" aria-hidden="true"><i class="fa-solid fa-boxes-stacked"></i></span>
+          <h3>Inventory</h3>
+          <p>Always in control</p>
+        </article>
+        <article class="feature-item">
+          <span class="feature-icon" aria-hidden="true"><i class="fa-solid fa-receipt"></i></span>
+          <h3>Quick billing</h3>
+          <p>Fast and simple</p>
+        </article>
+        <article class="feature-item">
+          <span class="feature-icon" aria-hidden="true"><i class="fa-solid fa-microphone-lines"></i></span>
+          <h3>Telugu voice</h3>
+          <p>Talk. Manage. Done.</p>
+        </article>
+        <article class="feature-item">
+          <span class="feature-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
+          <h3>Sales insights</h3>
+          <p>Grow your business</p>
+        </article>
+        <article class="feature-item">
+          <span class="feature-icon" aria-hidden="true"><i class="fa-solid fa-truck-fast"></i></span>
+          <h3>Order delivery</h3>
+          <p>From your shop to their home</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="dcf" class="dcf" data-play="0">
+    <div class="dcf-fallback">
+      <div>
+        <p><strong>DigiMart</strong> &mdash; stock, sales, bills and deliveries in one friendly place.</p>
+        <p>&copy; 2026 DigiMart. Made for India's neighbourhood shops.</p>
+      </div>
+      <p><a href="login.html">Start free</a> &middot; <a href="dashboard.html">Open dashboard</a></p>
+    </div>
+  </footer>
+
+  <script src="js/landing.js"></script>
+  <script src="js/landing-anim.js"></script>
+</body>
+</html>

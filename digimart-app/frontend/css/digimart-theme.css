@@ -1,0 +1,46 @@
+/* Digimart theme: remaps the existing dark variables to the cream / terracotta design */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;600&display=swap');
+:root{--dm-orange:#C2481F;--dm-orange-d:#a63b17;--dm-peach:#FBE3D3;--dm-cream:#FFF1E4;--dm-char:#2B2623;--dm-text:#1A1412;--dm-muted:#6B5F58;
+--bg-primary:var(--dm-cream);--bg-secondary:#fff;--bg-card:#fff;--bg-card-hover:#fffaf5;--bg-glass:#fff;--bg-glass-hover:#fff3ea;--bg-input:#fff;--bg-topbar:rgba(255,241,228,.90);--bg-table-head:#fbf1e8;
+--border-color:#efe3d8;--border-hover:#e3b9a3;--text-primary:var(--dm-text);--text-secondary:#3b312c;--text-muted:var(--dm-muted);
+--accent-blue:var(--dm-orange);--accent-purple:#b4532a;--accent-cyan:#d9822b;--accent-green:#2f9e6b;--accent-orange:#d9822b;--accent-red:#d0392b;
+--gradient-1:linear-gradient(135deg,#C2481F,#e0693a);--gradient-2:linear-gradient(135deg,#e0693a,#d9822b);--gradient-3:linear-gradient(135deg,#d9822b,#C2481F);--gradient-4:linear-gradient(135deg,#2f9e6b,#5fbf91);
+--shadow-sm:0 2px 8px rgba(120,70,40,.08);--shadow-md:0 6px 20px rgba(120,70,40,.10);--shadow-lg:0 12px 36px rgba(120,70,40,.14);--shadow-glow-blue:0 6px 20px rgba(194,72,31,.25);--shadow-glow-purple:0 6px 20px rgba(194,72,31,.2);}
+body{font-family:'Inter','Noto Sans Telugu',sans-serif;background:var(--dm-cream);color:var(--dm-text)}
+h1,h2,h3,.dm-serif{font-family:'DM Serif Display',serif;font-weight:400}
+.sidebar{background:var(--dm-char)!important;color:#eadfd7}.sidebar *{color:#eadfd7}
+.sidebar .nav-item.active{background:var(--dm-orange)!important;border-radius:12px}.sidebar .nav-item.active *{color:#fff}
+.sidebar-logo{background:var(--dm-orange)!important;color:#fff!important}
+.glass-card,.stat-card{background:#fff!important;border:1px solid var(--border-color)!important;border-radius:18px!important;box-shadow:var(--shadow-sm)!important;backdrop-filter:none!important}
+.btn-primary{background:var(--dm-orange)!important;color:#fff!important;border-radius:999px!important;border:0}.btn-primary:hover{background:var(--dm-orange-d)!important}
+.btn-secondary{border-radius:999px!important;border:1px solid var(--dm-orange)!important;color:var(--dm-orange)!important;background:transparent!important}
+.input-field,select,input{background:#fff!important;color:var(--dm-text)!important;border:1px solid var(--border-color)!important;border-radius:10px!important}
+.tab.active{background:var(--dm-orange)!important;color:#fff!important;border-radius:999px!important}
+table th{background:var(--bg-table-head);color:var(--dm-muted)}table td,table th{padding:10px 8px;border-bottom:1px solid var(--border-color)}
+.dm-pill{display:inline-block;padding:3px 12px;border-radius:999px;font-size:12px;font-weight:600}
+.dm-pill.paid{background:#dff1ff;color:#1f6fa5}.dm-pill.pending{background:var(--dm-peach);color:var(--dm-orange)}.dm-pill.upi{background:#fff3cf;color:#9a6b00}
+.dm-hello{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px}.dm-hello h2{font-size:28px;margin:0}
+.dm-ico{width:46px;height:46px;border-radius:14px;background:var(--dm-peach);color:var(--dm-orange);display:grid;place-items:center;font-size:20px}
+.dm-stat{display:flex;gap:14px;align-items:center}.dm-stat .v{font-family:'DM Serif Display',serif;font-size:30px;line-height:1.1}
+@media(max-width:768px){.dm-hello h2{font-size:22px}}
+
+/* Top bar: remove the dark glass layer, clean white search pill */
+.topbar{background:var(--dm-cream)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-bottom:1px solid var(--border-color)}
+.topbar-search{background:#fff!important;border:1px solid var(--border-color)!important;border-radius:999px!important;box-shadow:var(--shadow-sm)}
+.topbar-search:focus-within{border-color:var(--dm-orange)!important;box-shadow:0 0 0 3px rgba(194,72,31,.15)!important}
+.topbar-search input{background:none!important;border:none!important;border-radius:0!important;box-shadow:none!important;padding:0!important}
+.topbar-search kbd{background:#f6ebe0!important;color:var(--dm-muted)!important}
+.topbar-btn{background:#fff!important;border:1px solid var(--border-color)!important;color:var(--dm-muted)!important}
+.topbar-btn:hover{background:var(--dm-peach)!important;color:var(--dm-orange)!important}
+.topbar-profile-name,.topbar-title{color:var(--dm-text)}
+
+/* Floating buttons: keep a clear gap between the mic and the + button (desktop; mobile hides the + button) */
+@media(min-width:769px){
+  .voice-fab{bottom:100px!important;right:29px!important}   /* + button spans 28-84px; 16px gap above it */
+  .fab-menu{bottom:154px!important}                          /* quick-action menu opens above the mic, not over it */
+}
+
+/* Search bar: mic button replaces the keyboard-shortcut tag */
+.search-mic{width:30px;height:30px;flex:none;border:0;border-radius:50%;background:var(--dm-orange);color:#fff;display:grid;place-items:center;cursor:pointer;font-size:13px;padding:0;transition:.2s}
+.search-mic:hover{background:var(--dm-orange-d);transform:scale(1.08)}
+.topbar-search .search-mic i{color:#fff!important;font-size:13px}

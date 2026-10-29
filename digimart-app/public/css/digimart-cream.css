@@ -1,0 +1,163 @@
+/* ==========================================================================
+   DIGIMART CREAM THEME (light, default)
+   Loaded after digimart-theme.css and digimart-doodle.css. Palette:
+   canvas #FFF1E4 · cards #FFFFFF · brand #C2481F · sidebar #2B2623
+   ========================================================================== */
+
+html { background: var(--dm-cream); }
+
+body {
+  background:
+    radial-gradient(900px 620px at 8% -10%, rgba(194, 72, 31, 0.10), transparent 62%),
+    radial-gradient(820px 600px at 96% -4%, rgba(217, 130, 43, 0.10), transparent 58%),
+    radial-gradient(760px 620px at 52% 108%, rgba(47, 158, 107, 0.06), transparent 62%),
+    var(--dm-cream) !important;
+  color: var(--dm-text) !important;
+}
+
+.main-wrapper,
+.content-area,
+.app-layout {
+  background: transparent !important;
+}
+
+/* Soft warm light instead of the blue/purple mesh */
+.bg-canvas::before {
+  background: radial-gradient(circle, rgba(194, 72, 31, 0.10) 0%, transparent 70%) !important;
+}
+
+.bg-canvas::after {
+  background: radial-gradient(circle, rgba(217, 130, 43, 0.08) 0%, transparent 70%) !important;
+}
+
+.bg-blob3 {
+  background: radial-gradient(circle, rgba(47, 158, 107, 0.05) 0%, transparent 70%) !important;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(43, 38, 35, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43, 38, 35, 0.04) 1px, transparent 1px) !important;
+  background-size: 52px 52px !important;
+}
+
+/* Topbar: warm translucent cream */
+.topbar {
+  background: rgba(255, 241, 228, 0.88) !important;
+  backdrop-filter: blur(18px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: 0 10px 30px -24px rgba(120, 70, 40, 0.45);
+}
+
+/* White cards, soft warm shadow */
+.glass-card,
+.stat-card,
+.dm-card,
+.product-card {
+  background: #fff !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 2px 8px rgba(120, 70, 40, 0.06) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.glass-card:hover,
+.dm-card:hover,
+.product-card:hover {
+  border-color: var(--border-hover) !important;
+  box-shadow: 0 12px 34px rgba(120, 70, 40, 0.13) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* ---------- SmartVyapar / DM cards layout ---------- */
+.dm-grid { display: grid; gap: 24px; margin-bottom: 16px; }
+.dm-4 { grid-template-columns: repeat(4, 1fr); }
+.dm-2 { grid-template-columns: 1.5fr 1fr; }
+.dm-2e { grid-template-columns: 1fr 1fr; }
+
+.dm-card { padding: 26px !important; border-radius: 24px !important; }
+.dm-card-top { display: flex; justify-content: space-between; align-items: flex-start; }
+
+.dm-head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 18px; font-weight: 600; font-size: 19px; color: var(--dm-text);
+}
+.dm-head select {
+  padding: 8px 14px; border-radius: 10px; font-size: 12px;
+  background: #fff !important; border: 1px solid var(--border-color) !important;
+  color: var(--dm-text) !important;
+}
+
+.dm-lbl { font-size: 14px; color: var(--dm-muted) !important; }
+.dm-num {
+  font-size: 40px; letter-spacing: -0.02em; margin: 10px 0 14px;
+  font-family: 'DM Serif Display', serif; color: var(--dm-text);
+}
+.dm-delta { font-size: 14px; }
+.dm-delta.up { color: #2F9E6B !important; }
+.dm-delta.down { color: #d0392b !important; }
+.dm-delta.mute { color: var(--dm-muted) !important; }
+
+.dm-tile { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; font-size: 20px; }
+.dm-tile.g { background: #e3f5ec; color: #2F9E6B; }
+.dm-tile.p { background: #f3e8ff; color: #8b5cf6; }
+.dm-tile.o { background: #fde7d8; color: #C2481F; }
+.dm-tile.n { background: #f1ece8; color: #6B5F58; }
+
+.dm-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; }
+.dm-av {
+  width: 38px; height: 38px; border-radius: 50%; background: var(--dm-peach);
+  color: var(--dm-orange); display: grid; place-items: center;
+  font-weight: 600; font-size: 13px; flex: none;
+}
+.dm-row small { display: block; color: var(--dm-muted) !important; }
+.dm-row .grow { flex: 1; }
+
+.dm-dot { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; flex: none; }
+.dm-leg { display: none; }
+
+div:has(> #svTrend),
+div:has(> #svMix) {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 18px;
+  height: 300px !important;
+}
+
+/* ---------- Mobile surfaces ---------- */
+@media (max-width: 900px) {
+  .dm-4 { grid-template-columns: 1fr 1fr; }
+  .dm-2,
+  .dm-2e { grid-template-columns: 1fr; }
+
+  .mobile-header {
+    background: rgba(255, 241, 228, 0.94) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+  }
+  .mobile-header-title { color: var(--dm-text) !important; }
+  .mobile-header-btn {
+    background: #fff !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--dm-muted) !important;
+  }
+  .mobile-bottom-nav {
+    background: rgba(255, 255, 255, 0.97) !important;
+    border-top: 1px solid var(--border-color) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+  }
+  .mobile-nav-item { color: var(--dm-muted); }
+  .mobile-nav-item.active { color: var(--dm-orange); }
+  .mobile-more-drawer {
+    background: #fff !important;
+    border-top: 1px solid var(--border-color) !important;
+  }
+  .mobile-more-drawer-title { color: var(--dm-text); }
+  .mobile-more-item i { background: var(--dm-cream) !important; color: var(--dm-orange); }
+  .mobile-more-item span { color: var(--dm-text); }
+}

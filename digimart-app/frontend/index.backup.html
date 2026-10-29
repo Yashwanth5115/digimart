@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digimart — Give your shop the dashboard it deserves</title>
+<meta name="description" content="Stock, sales, bills and a Telugu-friendly AI assistant in one simple place for your kirana shop.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Noto+Sans+Telugu:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#000;color:#fff;font-family:'Poppins','Noto Sans Telugu',sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}
+nav{height:92px;border-bottom:1px solid #15151c;display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100% - 1100px)/2))}
+.logo{font-weight:600;font-size:24px;display:flex;gap:10px;align-items:center}.logo i{color:#e8743b}
+.links{display:flex;gap:40px;color:#a1a1aa;font-size:17px;align-items:center}.links a:hover{color:#fff}
+.signin{border:1px solid #2a2a33;padding:9px 20px;border-radius:10px;color:#fff}
+.hero{text-align:center;padding:30px 20px 0;position:relative}
+.pill{display:inline-flex;gap:10px;align-items:center;border:1px solid #23232e;background:#0b0b11;border-radius:999px;padding:11px 22px;font-size:14.5px;color:#b4b4c0}
+h1{font-weight:500;font-size:clamp(40px,7.2vw,76px);line-height:1.18;letter-spacing:-.02em;margin:34px 0 26px}
+h1 span{display:block;background:linear-gradient(180deg,#fff 20%,#8d8d95);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:#9aa3b8;font-size:19px;line-height:1.6;max-width:640px;margin:0 auto 46px}
+.btn{display:inline-block;background:linear-gradient(180deg,#fff,#c9c9cf);color:#000;font-weight:500;font-size:19px;padding:16px 40px;border-radius:10px;box-shadow:0 6px 24px rgba(255,255,255,.08)}
+.btn:hover{transform:translateY(-1px)}
+.glow{position:relative;height:90px;margin-top:20px}.glow:before{content:"";position:absolute;left:50%;bottom:-40px;width:min(900px,90%);height:170px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 100%,rgba(232,140,60,.55),rgba(232,116,59,.18) 45%,transparent 70%);filter:blur(8px)}
+.app{position:relative;max-width:1290px;margin:0 auto;background:#07070a;border:1px solid #1b1b22;border-radius:16px 16px 0 0;display:grid;grid-template-columns:225px 1fr;text-align:left;box-shadow:0 -10px 60px rgba(232,116,59,.12)}
+.side{border-right:1px solid #16161d;padding:22px 14px;min-height:340px}.side .logo{font-size:18px;padding:0 10px 18px;border-bottom:1px solid #16161d;margin-bottom:14px}
+.side div.i{padding:11px 12px;border-radius:9px;color:#a1a1aa;font-size:15px;margin-bottom:4px}.side div.i i{width:26px}.side .on{background:#14141b;border:1px solid #2a2a33;color:#fff}
+.main{padding:18px 24px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.top h3{margin:0;font-weight:500;font-size:22px}.top small{color:#7c7c88}
+.srch{background:#101016;border-radius:8px;padding:9px 16px;color:#8a8a93;font-size:14px;width:240px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.c{background:#0e0e12;border:1px solid #1b1b22;border-radius:14px;padding:16px;display:flex;justify-content:space-between}
+.c small{color:#8a8a93;font-size:12.5px}.c b{display:block;font-size:26px;font-weight:500;margin:4px 0}.c em{font-style:normal;font-size:12px}.up{color:#34d399}.dn{color:#f87171}
+.t{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-size:17px}.g{background:#10281e;color:#34d399}.p{background:#241a3a;color:#a78bfa}.o{background:#2a1a0a;color:#fb923c}.n{background:#1d1d21;color:#d4d4d8}
+.feat{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1100px;margin:70px auto;padding:0 20px;text-align:left}
+.feat div{border:1px solid #16161d;background:#0a0a0e;border-radius:14px;padding:20px}.feat i{color:#e8743b;font-size:22px;margin-bottom:12px;display:block}.feat b{font-weight:500}.feat span{display:block;color:#8a8a93;font-size:13.5px;margin-top:4px}
+footer{text-align:center;color:#6b6b76;font-size:13px;padding:0 0 40px}
+@media(max-width:900px){.links a{display:none}.links .signin{display:inline-block}.app{grid-template-columns:1fr}.side{display:none}.cards{grid-template-columns:1fr 1fr}.feat{grid-template-columns:1fr 1fr}.srch{display:none}nav{height:76px}}
+.x2{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-top:14px}.c2{background:#0e0e12;border:1px solid #1b1b22;border-radius:14px;padding:16px}
+.hd{display:flex;justify-content:space-between;font-weight:500;margin-bottom:12px}.hd span{color:#8a8a93;font-size:12px;font-weight:400}
+.r2{display:flex;align-items:center;gap:12px;padding:9px 0;border-top:1px solid #16161d}.av{width:34px;height:34px;border-radius:50%;background:#26262b;display:grid;place-items:center;font-size:13px}
+.pl{padding:3px 12px;border-radius:999px;font-size:12px}.pl.ok{background:#10281e;color:#34d399}.pl.due{background:#2a1a0a;color:#fb923c}
+.cta2{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:6px}.cta2 p{color:#9aa3b8;font-size:14px;margin:0 0 12px}.cta2 .btn{font-size:16px;padding:12px 26px}
+@media(max-width:900px){.x2{grid-template-columns:1fr}}
+</style></head><body>
+<nav><a class="logo" href="index.html"><i class="fas fa-bag-shopping"></i>Digimart</a>
+<div class="links"><a href="#features">Features</a><a href="#features">Solutions</a><a href="#features">Pricing</a><a href="dashboard.html">Dashboard</a><a class="signin" href="login.html">Sign in</a></div></nav>
+<section class="hero">
+<a class="pill" href="#features">New: Telugu voice assistant is here! <b style="color:#fff;font-weight:500">Read more →</b></a>
+<h1>Give your shop<span>the dashboard it deserves</span></h1>
+<p class="sub">Stock, sales, bills and an AI assistant that speaks Telugu and English — one simple place to run your kirana shop.</p>
+<a class="btn" href="login.html">Get started</a>
+<div class="glow"></div>
+<div class="app" aria-label="Digimart dashboard preview">
+<div class="side"><div class="logo"><i class="fas fa-chart-line"></i>Digimart</div><div class="i on"><i class="fas fa-house"></i>Dashboard</div><div class="i"><i class="fas fa-box"></i>Inventory</div><div class="i"><i class="fas fa-file-invoice"></i>Billing</div><div class="i"><i class="fas fa-truck"></i>Orders</div><div class="i"><i class="fas fa-users"></i>Customers</div><div class="i"><i class="fas fa-chart-column"></i>Reports</div></div>
+<div class="main"><div class="top"><div><h3>Dashboard</h3><small>Welcome back! Here's what's happening at your shop today.</small></div><div class="srch"><i class="fas fa-search"></i>&nbsp; Search...</div></div>
+<div class="cards">
+<div class="c"><div><small>Today's Sales</small><b id="s1">₹24,580</b><em class="up" id="d1">+12% from yesterday</em></div><div class="t n"><i class="fas fa-indian-rupee-sign"></i></div></div>
+<div class="c"><div><small>Bills Generated</small><b id="s2">48</b><em class="up">today</em></div><div class="t g"><i class="fas fa-file-invoice"></i></div></div>
+<div class="c"><div><small>Pending Payments</small><b id="s3">₹6,200</b><em class="dn">customers owe you</em></div><div class="t p"><i class="fas fa-hourglass-half"></i></div></div>
+<div class="c"><div><small>Low Stock Items</small><b id="s4">5</b><em class="dn">View items →</em></div><div class="t o"><i class="fas fa-box"></i></div></div>
+</div></div></div></section>
+<section class="feat" id="features">
+<div><i class="fas fa-cube"></i><b>Inventory</b><span>Always in control</span></div><div><i class="fas fa-file-lines"></i><b>Quick billing</b><span>Fast and simple</span></div><div><i class="fas fa-microphone"></i><b>Telugu voice</b><span>Talk. Manage. Done.</span></div><div><i class="fas fa-chart-column"></i><b>Sales insights</b><span>Grow your business</span></div><div><i class="fas fa-truck"></i><b>Order delivery</b><span>From your shop to their home</span></div></section>
+<footer>© Digimart · Made for India's neighbourhood shops</footer>
+<script>
+// Real numbers from your Flask backend when it is running; the sample values stay otherwise.
+fetch(`${location.protocol}//${location.hostname}:5005/api/sv/summary`).then(r=>r.json()).then(({data:s})=>{
+ const inr=n=>'₹'+Math.round(n).toLocaleString('en-IN'),t=s.trend,y=t.length>1?t[t.length-2].sales:0;
+ s1.textContent=inr(s.today.sales);s2.textContent=s.bills_today;s3.textContent=inr(s.pending_total);s4.textContent=s.low_stock.length;
+ d1.textContent=y?`${s.today.sales>=y?'+':''}${Math.round((s.today.sales-y)/y*100)}% from yesterday`:'No sales yesterday';}).catch(()=>{});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(async()=>{
+const inr=n=>'\u20B9'+Math.round(n).toLocaleString('en-IN');
+let s;try{s=(await(await fetch(`${location.protocol}//${location.hostname}:5005/api/sv/summary`)).json()).data}catch(e){}
+s=s||{trend:[8200,12400,9800,15100,11300,18900,24580].map(v=>({date:'',sales:v})),mix:{cash:52000,upi:61000,credit:18000},recent:[{id:2048,customer:'Ramesh Stores',total:1250,payment:'upi',paid:1},{id:2047,customer:'Suresh Kirana',total:850,payment:'cash',paid:1},{id:2046,customer:'Priya General Store',total:2430,payment:'credit',paid:0}]};
+const dn=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],col={cash:'#34d399',upi:'#a78bfa',credit:'#fb923c'},mix=Object.entries(s.mix||{});
+const rows=(s.recent||[]).map(r=>`<div class="r2"><div class="av">${(r.customer||'W')[0].toUpperCase()}</div><div style="flex:1">${r.customer||'Walk-in'}<small style="display:block;color:#8a8a93">#DM-${String(r.id).padStart(4,'0')} &middot; ${inr(r.total)}</small></div><span class="pl ${r.paid?'ok':'due'}">${r.paid?r.payment:'credit due'}</span></div>`).join('')||'<div style="color:#8a8a93">No sales yet</div>';
+document.querySelector('.main').insertAdjacentHTML('beforeend',`<div class="x2"><div class="c2"><div class="hd">Sales Overview<span>Last 7 days</span></div><div style="height:240px"><canvas id="lt"></canvas></div></div><div class="c2"><div class="hd">Payment Mix<span>30 days</span></div><div style="height:210px"><canvas id="lm"></canvas></div></div></div><div class="x2"><div class="c2"><div class="hd">Recent Sales<span>Live from your shop</span></div>${rows}</div><div class="c2 cta2"><b style="font-size:18px;font-weight:500">See your whole shop in one place</b><p>Inventory, billing, expenses, tasks and the Telugu assistant are all inside the full dashboard.</p><a class="btn" href="dashboard.html">Open full dashboard &rarr;</a></div></div>`);
+if(!window.Chart)return;
+new Chart(document.getElementById('lt'),{type:'line',data:{labels:s.trend.map((t,i)=>t.date?new Date(t.date).toLocaleDateString('en-IN',{weekday:'short'}):dn[i]),datasets:[{data:s.trend.map(t=>t.sales),borderColor:'#e4e4e7',backgroundColor:'rgba(228,228,231,.08)',fill:true,tension:.35,pointBackgroundColor:'#fff'}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{color:'#8a8a93',callback:v=>inr(v)},grid:{color:'#1f1f23'},border:{display:false}},x:{ticks:{color:'#8a8a93'},grid:{display:false},border:{display:false}}}}});
+new Chart(document.getElementById('lm'),{type:'doughnut',data:{labels:mix.map(m=>m[0]),datasets:[{data:mix.map(m=>m[1]),backgroundColor:mix.map(m=>col[m[0]]||'#888'),borderColor:'#0e0e12',borderWidth:3}]},options:{maintainAspectRatio:false,cutout:'68%',plugins:{legend:{position:'bottom',labels:{color:'#a1a1aa',boxWidth:10}}}}});
+})();
+</script>
+</body></html>
